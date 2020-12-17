@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="" />
+    <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card-list/card-list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card-list/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card/card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card/card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-button/error-button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-button/error-button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-button/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-indicator/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pokemon-page/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/property-list/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/property-list/property-list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon/random-pokemon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon/random-pokemon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/spinner/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/spinner/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/spinner/spinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api-pokemon-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,16 +49,34 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lQuRDREOqucVjwKOAM4UqnZscD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/card" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -28,6 +85,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/card" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/app" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -39,10 +104,37 @@
       <updated>1607541627704</updated>
       <workItem from="1607541634038" duration="3444000" />
       <workItem from="1607580198422" duration="2022000" />
+      <workItem from="1607599418570" duration="1929000" />
+      <workItem from="1607622910704" duration="6534000" />
+      <workItem from="1607681725902" duration="18926000" />
+      <workItem from="1607715982519" duration="8615000" />
+      <workItem from="1607771239680" duration="14229000" />
+      <workItem from="1607854382475" duration="14233000" />
+      <workItem from="1607875366503" duration="3856000" />
+      <workItem from="1607942368135" duration="19893000" />
+      <workItem from="1607977515216" duration="572000" />
+      <workItem from="1608030207509" duration="15003000" />
+      <workItem from="1608116163982" duration="8396000" />
+      <workItem from="1608144224762" duration="3168000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
