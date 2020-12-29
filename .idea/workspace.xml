@@ -1,45 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/app/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/app/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card-list/card-list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card-list/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card/card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/error-button/error-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/error-button/error-button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/error-button/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/error-indicator/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pokemon-page/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/property-list/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/property-list/property-list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon/random-pokemon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon/random-pokemon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/spinner/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/spinner/spinner.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/spinner/spinner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api-pokemon-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-boundry/error-boundry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-boundry/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hoc-helpers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pk-compoments/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pk-compoments/property-lists.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card-list/card-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api-pokemon-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api-pokemon-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +31,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectId" id="1lQuRDREOqucVjwKOAM4UqnZscD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -116,6 +98,21 @@
       <workItem from="1608030207509" duration="15003000" />
       <workItem from="1608116163982" duration="8396000" />
       <workItem from="1608144224762" duration="3168000" />
+      <workItem from="1608407097767" duration="133000" />
+      <workItem from="1608543351256" duration="5056000" />
+      <workItem from="1608549449946" duration="7727000" />
+      <workItem from="1608718444190" duration="8083000" />
+      <workItem from="1608734170422" duration="7000" />
+      <workItem from="1608734219715" duration="4674000" />
+      <workItem from="1608810440741" duration="13656000" />
+      <workItem from="1608846527158" duration="3471000" />
+      <workItem from="1608898670678" duration="11398000" />
+      <workItem from="1608929936214" duration="2777000" />
+      <workItem from="1609000788991" duration="3597000" />
+      <workItem from="1609069453400" duration="10881000" />
+      <workItem from="1609146360299" duration="15569000" />
+      <workItem from="1609241041001" duration="195000" />
+      <workItem from="1609241447361" duration="387000" />
     </task>
     <servers />
   </component>

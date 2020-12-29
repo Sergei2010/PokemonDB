@@ -9,7 +9,8 @@ export default class CardList extends Component {
     apiPokemonService = new ApiPokemonService();
 
     state = {
-        cardList: null
+        cardList: null,
+        propName: null
     }
 
     componentDidMount() {
@@ -28,14 +29,15 @@ export default class CardList extends Component {
             return;
         }
 
-        this.setState({propName});
-
+        this.setState({
+            propName
+        });
+        console.log(`propName - ${propName}`);
         this.apiPokemonService
             .getTypesCardList(propName)
             .then((cardList) => {
                 this.setState({cardList})
             })
-
     }
 
     renderItems(arr) {
@@ -61,13 +63,13 @@ export default class CardList extends Component {
             return <p>Select a property from a list</p>
         }
 
-        const { cardList } = this.state;
+        const { propName, cardList } = this.state;
 
         const items = this.renderItems(cardList);
 
         return (
             <Fragment>
-                <h2 className="pl-4">{this.state.propName}</h2>
+                <h2 className="pl-4">{ propName }</h2>
                 <ErrorButton />
                 <ul className=" card-list
                         list-group

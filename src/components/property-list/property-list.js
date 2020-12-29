@@ -1,61 +1,38 @@
-import React, {Component, Fragment} from 'react';
-import Spinner from '../spinner';
+import React, {Fragment} from 'react';
 
 import './property-list.css';
 
-export default class PropertyList extends Component {
+const PropertyList = (props) => {
 
-    state = {
-        propList: null,
-        propName: "types"
-    };
-    propName;
+    const { data, onPropSelected } = props;
 
-    componentDidMount() {
-        const { getData } = this.props;
-            getData()
-            .then((propList) => {
-                this.setState({
-                    propList
-                });
-                //console.log(this.state);
-            });
-    }
+    const { propName, propList } = data;
 
-    renderItems(arr) {
+    //console.log(props);
 
-        return arr.map((name, id ) => {
-            return (
-                <li className="list-group-item"
-                    key={id}
-                    onClick={() => {
-                        this.props.onPropSelected(name);
-                        //console.log(name);
-                    }}
-                    >
-                    { name }
-                </li>
-            );
-        });
-    }
-
-    render() {
-
-        const { propList } = this.state;
-
-        if(!propList) {
-            return <Spinner />
-        }
-
-        const items = this.renderItems(propList);
+    const items = propList.map((name, id) => {
 
         return (
-            <Fragment>
-                <h2 className="pl-4">{this.state.propName}</h2>
-                <ul className="item-list list-group">
-                    { items }
-                </ul>
-            </Fragment>
+            <li className="list-group-item"
+                key={id}
+                onClick={() => {
+                    onPropSelected(name);
+                    //console.log(name);
+                }}>
+                { name }
+            </li>
         );
-    }
+    });
+
+    return (
+        <Fragment>
+            <h2 className="pl-4">{propName}</h2>
+            <ul className="item-list list-group">
+                { items }
+            </ul>
+        </Fragment>
+    );
+
 }
+
+export default PropertyList;

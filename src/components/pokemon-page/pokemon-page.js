@@ -4,8 +4,22 @@ import PropertyList from '../property-list/property-list';
 import CardList from '../card-list/card-list';
 import ErrorIndicator from '../error-indicator/error-indicator';
 import ApiPokemonService from '../../services/api-pokemon-service';
+import ErrorBoundry from "../error-boundry";
 
 import './pokemon-page.css';
+
+const Row = ({ left, right }) => {
+  return(
+      <div className="row mb2">
+          <div className="col-md-3">
+              { left }
+          </div>
+          <div className="col-md-9">
+              { right }
+          </div>
+      </div>
+  )
+};
 
 export default class PokemonPage extends Component {
 
@@ -13,15 +27,9 @@ export default class PokemonPage extends Component {
 
     state = {
         selectedTypes: null,
+        propName: 'types',
         hasError: false
     };
-
-    componentDidCatch(error, info) {
-
-        this.setState({
-            hasError: true
-        });
-    }
 
     onPropSelected = (name) => {
         this.setState({
@@ -35,17 +43,22 @@ export default class PokemonPage extends Component {
             return <ErrorIndicator />;
         }
 
+        const propertyList = (
+            <PropertyList
+                onPropSelected={this.onPropSelected}
+                getData={this.apiPokemonService.getAllTypes} />
+        );
+
+        const cardList = (
+            <ErrorBoundry>
+                <CardList propName={this.state.selectedTypes} />
+            </ErrorBoundry>
+        );
+
         return (
-            <div className="row mb2">
-                <div className="col-md-3">
-                    <PropertyList
-                        onPropSelected={this.onPropSelected}
-                        getData={this.apiPokemonService.getAllTypes}/>
-                </div>
-                <div className="col-md-9">
-                    <CardList propName={this.state.selectedTypes} />
-                </div>
-            </div>
+            <ErrorBoundry>
+                <Row left={ propertyList } right={ cardList } />
+            </ErrorBoundry>
         );
     }
 }
