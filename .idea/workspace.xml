@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/error-boundry/error-boundry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/error-boundry/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/hoc-helpers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pk-compoments/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pk-compoments/property-lists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-cardlist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/card-list/card-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hoc-helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc-helpers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hoc-helpers/with-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-proplist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/property-lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/property-lists.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/random-pokemon/random-pokemon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/random-pokemon/random-pokemon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api-pokemon-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api-pokemon-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +64,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -112,7 +111,14 @@
       <workItem from="1609069453400" duration="10881000" />
       <workItem from="1609146360299" duration="15569000" />
       <workItem from="1609241041001" duration="195000" />
-      <workItem from="1609241447361" duration="387000" />
+      <workItem from="1609241447361" duration="15004000" />
+      <workItem from="1609325032567" duration="4635000" />
+      <workItem from="1609332212923" duration="1069000" />
+      <workItem from="1609333882283" duration="7322000" />
+      <workItem from="1609354552425" duration="4090000" />
+      <workItem from="1609586951847" duration="4619000" />
+      <workItem from="1609624806059" duration="493000" />
+      <workItem from="1609674262055" duration="12159000" />
     </task>
     <servers />
   </component>

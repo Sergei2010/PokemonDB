@@ -1,84 +1,46 @@
-import React, {Component, Fragment} from 'react';
-import ApiPokemonService from '../../services/api-pokemon-service';
-import ErrorButton from '../error-button/error-button';
+import React, { Fragment } from 'react';
+import ErrorButton from "../error-button";
 
 import './card-list.css';
 
-export default class CardList extends Component {
+const CardList = (props) => {
 
-    apiPokemonService = new ApiPokemonService();
+    const { name, propName, cardList,  onCardSelected } = props;
 
-    state = {
-        cardList: null,
-        propName: null
-    }
+    //console.log(`name - ${name}`);
+    //console.log(`propName - ${propName}`);
+    //console.log(cardList);
+    //console.log(`onCardSelected - ${onCardSelected}`);
 
-    componentDidMount() {
-        this.updateCardList();
-    }
+    //console.log(props);
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if(this.props.propName !== prevProps.propName)  {
-            this.updateCardList();
-        }
-    }
-
-    updateCardList() {
-        const { propName } = this.props;
-        if (!propName) {
-            return;
-        }
-
-        this.setState({
-            propName
-        });
-        console.log(`propName - ${propName}`);
-        this.apiPokemonService
-            .getTypesCardList(propName)
-            .then((cardList) => {
-                this.setState({cardList})
-            })
-    }
-
-    renderItems(arr) {
-        return arr.map(({imageUrl, id}) => {
-            return (
-                <li className="list-group-item"
-                    key={id}
-                    onClick={() => {
-                        this.props.onCardSelected(id);
-                        //console.log(id);
-                    }}
-                >
-                    <img src={imageUrl} alt='imageCard' />
-                </li>
-            );
-        });
-    }
-
-
-    render() {
-
-        if(!this.state.cardList) {
-            return <p>Select a property from a list</p>
-        }
-
-        const { propName, cardList } = this.state;
-
-        const items = this.renderItems(cardList);
-
+    const items = cardList.map(({imageUrl, id}) => {
         return (
-            <Fragment>
-                <h2 className="pl-4">{ propName }</h2>
-                <ErrorButton />
-                <ul className=" card-list
-                        list-group
-                        list-group-horizontal
-                        flex-wrap
-                        justify-content-around">
-                    { items }
-                </ul>
-            </Fragment>
-        )
-    }
+            <li className="list-group-item"
+                key={id}
+                onClick={() => {
+                    onCardSelected(id, name);
+                    //console.log(id);
+                }}
+            >
+                <img src={imageUrl} alt='imageCard'/>
+            </li>
+        );
+    });
+
+    return (
+        <Fragment>
+            <h2 className="pl-4">{ propName }</h2>
+            <ErrorButton />
+            <ul className=" card-list
+                    list-group
+                    list-group-horizontal
+                    flex-wrap
+                    justify-content-around">
+                { items }
+            </ul>
+        </Fragment>
+    )
 }
+
+export default CardList;

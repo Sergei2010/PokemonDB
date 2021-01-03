@@ -1,35 +1,17 @@
-import React from 'react';
+
 import CardList from '../card-list';
-/*import ApiPokemonService from '../../services/api-pokemon-service';*/
-/*import ErrorButton from "../error-button";*/
+import { withDataCardList } from '../hoc-helpers';
+import ApiPokemonService from '../../services/api-pokemon-service';
 
-/*
 const apiPokemonService = new ApiPokemonService();
-*/
 
-/*
 const {
     getTypesCardList,
     getSubtypesCardList
 } = apiPokemonService;
-*/
 
-const CardTypesList = (props) => {
-
-    const { propName } = props;
-    //console.log(`forTypes - ${propName}`);
-
-    return(
-        <CardList propName={propName} />
-    )
-};
-
-const CardSubtypesList = () => {
-
-    return(
-        <CardList />
-    )
-}
+const CardTypesList = withDataCardList(CardList, getTypesCardList);
+const CardSubtypesList = withDataCardList(CardList, getSubtypesCardList);
 
 export {
     CardTypesList,

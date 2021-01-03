@@ -2,7 +2,7 @@ export default class ApiPokemonService {
 
     _apiBase = 'https://api.pokemontcg.io/v1';
     cards;
-    allCardsId = [];
+
 
     getResource = async (url) => {
         const res = await fetch(`${this._apiBase}${url}`);
@@ -17,22 +17,27 @@ export default class ApiPokemonService {
 
     getAllCards = async () => {
         const res = await this.getResource(`/cards/`);
-        return res.cards.map(this._transformCard);
+        return await res.cards
+            .map(this._transformCard);
     }
 
     getCardList = async (propName, prop) => {
         const res = await this.getResource(`/cards/?${propName}=${prop}`);
-        return res.cards.map(this._transformCardList);
+        return res.cards;
     }
 
     getTypesCardList = async (prop) => {
         const res = await this.getResource(`/cards/?types=${prop}`);
-        return res.cards.map(this._transformTypesCardList);
+        return res.cards
+            .map(this._transformTypesCardList)
+            .slice(0, 5);
     }
 
     getSubtypesCardList = async (prop) => {
         const res = await this.getResource(`/cards/?subtypes=${prop}`);
-        return res.cards.map(this._transformSubtypesCardList);
+        return res.cards
+            .map(this._transformSubtypesCardList)
+            .slice(0, 5);
     }
 
     getCard = async (id) => {
@@ -42,16 +47,17 @@ export default class ApiPokemonService {
     }
 
     getAllCardsId = async () => {
+        const allCardsId = [];
         const res = await this.getAllCards();
         res.forEach((card) => {
-            this.allCardsId.push(card.id);
+            allCardsId.push(card.id);
         });
-        return this.allCardsId;
+        return allCardsId;
     }
 
     getRandomId = async () => {
         const res = await this.getAllCardsId();
-        return res[Math.floor(Math.random() * 100)];
+        return res[Math.floor(Math.random() * 50)];
     }
 
     getAllSets() {
@@ -84,29 +90,29 @@ export default class ApiPokemonService {
             setCode: card.setCode,
             types: card.types,
             subtypes: card.subtype
-        }
-    }
+        };
+    };
 
     _transformTypesCardList = (card) => {
         return {
             id: card.id,
             types: card.types[0],
             imageUrl: card.imageUrl
-        }
-    }
+        };
+    };
 
     _transformSubtypesCardList = (card) => {
         return {
             id: card.id,
-            subtypes: card.subtypes[0],
+            subtypes: card.subtype[0],
             imageUrl: card.imageUrl
-        }
-    }
+        };
+    };
 
     _transformPropList = (res) => {
         return {
             propName: Object.keys(res)[0],
             propList: Object.values(res)[0]
         }
-    }
-}
+    };
+};

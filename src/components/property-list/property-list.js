@@ -16,8 +16,9 @@ const PropertyList = (props) => {
             <li className="list-group-item"
                 key={id}
                 onClick={() => {
-                    onPropSelected(name);
-                    //console.log(name);
+                    onPropSelected(name, propName);
+                    //console.log(`name - ${name}`);
+                    //console.log(`propName - ${propName}`);
                 }}>
                 { name }
             </li>

@@ -20,7 +20,8 @@ export default class App extends Component {
     state = {
         showRandomPokemon: true,
         hasError: false,
-        onPropSelected: null
+        name: null,
+        propName: null
     };
 
     toggleRandomPokemon = () => {
@@ -37,9 +38,10 @@ export default class App extends Component {
         })
     }
 
-    onPropSelected = (name) => {
+    onPropSelected = (name, propName) => {
         this.setState({
-            onPropSelected: name
+            name,
+            propName
         });
     };
 
@@ -53,10 +55,17 @@ export default class App extends Component {
             <RandomPokemon /> :
             null;
 
+        const { name, propName } = this.state;
+        //console.log(`name - ${name}`);
+        //console.log(`propName - ${propName}`);
+
         return (
             <ErrorBoundry>
                 <div className="pokemondb-app">
-                    <Header />
+                    <ErrorBoundry>
+                        <Header />
+                    </ErrorBoundry>
+
                     { pokemon }
 
                     <div className="row mb2 button-row">
@@ -74,8 +83,8 @@ export default class App extends Component {
                     <SubtypesList onPropSelected={this.onPropSelected} />
                     {/*<CardList propName={this.state.propName}/>*/}
 
-                    <CardTypesList propName={this.state.onPropSelected} />
-                    <CardSubtypesList propName={this.state.onPropSelected} />
+                    <CardTypesList propName={propName} name={name} />
+                    <CardSubtypesList propName={propName} name={name} />
 
                 </div>
             </ErrorBoundry>

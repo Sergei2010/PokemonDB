@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ApiPokemonService from "../../services/api-pokemon-service";
+import ApiPokemonService from '../../services/api-pokemon-service';
+import Spinner from '../spinner';
+import ErrorIndicator from '../error-indicator';
 
 import './random-pokemon.css';
-import Spinner from "../spinner";
-import ErrorIndicator from "../error-indicator";
 
 export default class RandomPokemon extends Component {
 
@@ -11,22 +11,26 @@ export default class RandomPokemon extends Component {
 
     state = {
         card: {},
-        loading: true,
-        error: false
+        loading: true
     }
 
     componentDidMount() {
         this.updateCard();
         this.interval = setInterval(
             this.updateCard,
-            8000);
+            10000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
 
     onCardLoaded = (card) => {
         this.setState({
             card,
-            loading: false
+            loading: false,
+            error: false
         });
     };
 
@@ -34,7 +38,8 @@ export default class RandomPokemon extends Component {
         this.setState({
             error: true,
             loading: false
-        })
+        });
+        console.log('you have some error ...');
     };
 
     updateCard = () => {
@@ -44,7 +49,7 @@ export default class RandomPokemon extends Component {
                 this.apiPokemonService
                     .getCard(id)
                     .then(this.onCardLoaded)
-                    .catch(this.onError)
+                    .catch(this.onError);
             })
     }
 
