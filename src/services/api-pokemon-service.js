@@ -17,7 +17,7 @@ export default class ApiPokemonService {
 
     getAllCards = async () => {
         const res = await this.getResource(`/cards/`);
-        return await res.cards
+        return res.cards
             .map(this._transformCard);
     }
 
