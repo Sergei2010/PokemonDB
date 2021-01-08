@@ -7,6 +7,17 @@
     <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card-list/card-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-cardlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-cardlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/random-pokemon/random-pokemon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/random-pokemon/random-pokemon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api-pokemon-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api-pokemon-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +121,17 @@
       <workItem from="1609586951847" duration="4619000" />
       <workItem from="1609624806059" duration="493000" />
       <workItem from="1609674262055" duration="12845000" />
-      <workItem from="1609759892695" duration="352000" />
+      <workItem from="1609759892695" duration="1687000" />
+      <workItem from="1609762675375" duration="4528000" />
+      <workItem from="1609773609982" duration="1425000" />
+      <workItem from="1609862120672" duration="8366000" />
+      <workItem from="1609929085848" duration="2975000" />
+      <workItem from="1609938308186" duration="483000" />
+      <workItem from="1609944035834" duration="2053000" />
+      <workItem from="1610020587156" duration="1388000" />
+      <workItem from="1610052630709" duration="1347000" />
+      <workItem from="1610106586937" duration="10063000" />
+      <workItem from="1610130568004" duration="1380000" />
     </task>
     <servers />
   </component>

@@ -13,7 +13,6 @@ const CardList = (props) => {
     //console.log(`onCardSelected - ${onCardSelected}`);
 
     //console.log(props);
-
     const items = cardList.map(({imageUrl, id}) => {
         return (
             <li className="list-group-item"

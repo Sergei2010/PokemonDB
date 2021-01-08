@@ -6,7 +6,8 @@ export default class Card extends Component {
 
     render() {
         return (
-            <div className="pokemon-details card">
+
+            /*<div className="pokemon-details card">
                 <img className="pokemon-image"
                      src="https://images.pokemontcg.io/base5/20.png"
                      alt="imagePokemon" />
@@ -28,7 +29,27 @@ export default class Card extends Component {
                         </li>
                     </ul>
                 </div>
+            </div>*/
+
+        <div className="pokemon-details card mb-3">
+            <h3 className="card-header">Dark Blastoise</h3>
+            <div className="card-body">
+                <h5 className="card-title">Types:</h5>
+                <h6 className="card-subtitle text-muted">Water</h6>
             </div>
+            <div className="pokemon-image">
+                <img className=" d-block user-select-none"
+                     src="https://images.pokemontcg.io/base5/20_hires.png"
+                     alt="imagePokemon" />
+            </div>
+            <ul className="list-group list-group-flush">
+                <li className="list-group-item">Subtype</li>
+                <li className="list-group-item">Stage 2</li>
+                <li className="list-group-item">ID</li>
+                <li className="list-group-item">base5-20</li>
+            </ul>
+        </div>
+
         )
     }
 }

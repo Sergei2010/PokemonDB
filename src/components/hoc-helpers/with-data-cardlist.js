@@ -35,6 +35,10 @@ const withDataCardList = (View, getData) => {
 
             getData(name)
                 .then((cardList) => {
+                    if (!cardList) {
+                        console.log('you have some problem with CARDLIST...');
+                        return;
+                    }
                     this.setState({
                         propName,
                         name,

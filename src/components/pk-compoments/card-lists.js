@@ -11,6 +11,7 @@ const {
 } = apiPokemonService;
 
 const CardTypesList = withDataCardList(CardList, getTypesCardList);
+
 const CardSubtypesList = withDataCardList(CardList, getSubtypesCardList);
 
 export {

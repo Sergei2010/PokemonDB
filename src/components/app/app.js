@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 
 import Header from '../header';
 import RandomPokemon from '../random-pokemon';
@@ -11,8 +11,10 @@ import {
     CardTypesList,
     CardSubtypesList
 } from '../pk-compoments';
+import Card from "../card";
 
 import './app.css';
+import Spinner from "../spinner";
 /*import PokemonPage from "../pokemon-page/pokemon-page";*/
 
 export default class App extends Component {
@@ -55,9 +57,32 @@ export default class App extends Component {
             <RandomPokemon /> :
             null;
 
+        const Row = ({ left, right }) => {
+            return(
+                <div className="row mb2">
+                    <div className="col-md-3">
+                        { left }
+                    </div>
+                    <div className="col-md-9">
+                        { right }
+                    </div>
+                </div>
+            )
+        };
+
         const { name, propName } = this.state;
         //console.log(`name - ${name}`);
         //console.log(`propName - ${propName}`);
+
+        let cardTypesShow;
+        let cardSubtypesShow;
+
+        if (propName === 'types') {
+            cardTypesShow = <CardTypesList propName={propName} name={name} />
+        }
+        else if (propName === 'subtypes') {
+            cardSubtypesShow =  <CardSubtypesList propName={propName} name={name} />
+        }
 
         return (
             <ErrorBoundry>
@@ -66,7 +91,13 @@ export default class App extends Component {
                         <Header />
                     </ErrorBoundry>
 
-                    { pokemon }
+                    {/*<ErrorBoundry>
+                        { pokemon }
+                    </ErrorBoundry>*/}
+
+                    <Suspense fallback={<Spinner />}>
+                       { pokemon }
+                    </Suspense>
 
                     <div className="row mb2 button-row">
                         <button
@@ -74,17 +105,29 @@ export default class App extends Component {
                             onClick={this.toggleRandomPokemon}>
                             Toggle Random Pokemon
                         </button>
-                        <ErrorButton />
                     </div>
 
                     {/*<PokemonPage />*/}
 
-                    <TypesList onPropSelected={this.onPropSelected} />
-                    <SubtypesList onPropSelected={this.onPropSelected} />
+                    {/*<TypesList onPropSelected={this.onPropSelected} />
+                    <SubtypesList onPropSelected={this.onPropSelected} />*/}
                     {/*<CardList propName={this.state.propName}/>*/}
 
-                    <CardTypesList propName={propName} name={name} />
-                    <CardSubtypesList propName={propName} name={name} />
+                    {/*{ cardShow }*/}
+
+                    <Suspense fallback={<Spinner />}>
+                            <Row
+                                left={ <TypesList onPropSelected={this.onPropSelected} /> }
+                                right={ cardTypesShow } />
+                    </Suspense>
+
+                    <Suspense fallback={<Spinner />}>
+                        <Row
+                            left={ <SubtypesList onPropSelected={this.onPropSelected} /> }
+                            right={ cardSubtypesShow } />
+                    </Suspense>
+
+                    <Card />
 
                 </div>
             </ErrorBoundry>

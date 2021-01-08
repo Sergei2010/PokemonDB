@@ -39,7 +39,7 @@ export default class RandomPokemon extends Component {
             error: true,
             loading: false
         });
-        console.log('you have some error ...');
+        console.log(`you have some error - ${err}`);
     };
 
     updateCard = () => {
