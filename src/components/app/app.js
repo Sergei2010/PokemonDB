@@ -2,7 +2,7 @@ import React, { Component, Suspense } from 'react';
 
 import Header from '../header';
 import RandomPokemon from '../random-pokemon';
-import ErrorButton from '../error-button/error-button';
+//import ErrorButton from '../error-button/error-button';
 import ErrorIndicator from '../error-indicator';
 import ErrorBoundry from '../error-boundry';
 import {
@@ -15,6 +15,8 @@ import Card from "../card";
 
 import './app.css';
 import Spinner from "../spinner";
+import {CardPage} from "../pk-compoments/card-page";
+import RandomPokemonCard from "../random-pokemon-card";
 /*import PokemonPage from "../pokemon-page/pokemon-page";*/
 
 export default class App extends Component {
@@ -23,7 +25,9 @@ export default class App extends Component {
         showRandomPokemon: true,
         hasError: false,
         name: null,
-        propName: null
+        propName: null,
+        id: null,
+        card: null
     };
 
     toggleRandomPokemon = () => {
@@ -46,6 +50,12 @@ export default class App extends Component {
             propName
         });
     };
+
+    onCardSelected = (id, card) => {
+        this.setState({
+            id
+        });
+    }
 
     render() {
 
@@ -70,7 +80,7 @@ export default class App extends Component {
             )
         };
 
-        const { name, propName } = this.state;
+        const { name, propName, id, card } = this.state;
         //console.log(`name - ${name}`);
         //console.log(`propName - ${propName}`);
 
@@ -78,10 +88,16 @@ export default class App extends Component {
         let cardSubtypesShow;
 
         if (propName === 'types') {
-            cardTypesShow = <CardTypesList propName={propName} name={name} />
+            cardTypesShow = <CardTypesList
+                                propName={propName}
+                                name={name}
+                                onCardSelected={this.onCardSelected} />
         }
         else if (propName === 'subtypes') {
-            cardSubtypesShow =  <CardSubtypesList propName={propName} name={name} />
+            cardSubtypesShow =  <CardSubtypesList
+                                    propName={propName}
+                                    name={name}
+                                    onCardSelected={this.onCardSelected} />
         }
 
         return (
@@ -95,9 +111,11 @@ export default class App extends Component {
                         { pokemon }
                     </ErrorBoundry>*/}
 
-                    <Suspense fallback={<Spinner />}>
+                    {/*<Suspense fallback={<Spinner />}>
                        { pokemon }
-                    </Suspense>
+                    </Suspense>*/}
+
+                    <RandomPokemonCard />
 
                     <div className="row mb2 button-row">
                         <button
@@ -127,7 +145,9 @@ export default class App extends Component {
                             right={ cardSubtypesShow } />
                     </Suspense>
 
-                    <Card />
+                    <CardPage id={id} card={card} />
+
+                    <Card id={id} />
 
                 </div>
             </ErrorBoundry>

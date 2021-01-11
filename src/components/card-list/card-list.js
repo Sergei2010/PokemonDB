@@ -5,20 +5,14 @@ import './card-list.css';
 
 const CardList = (props) => {
 
-    const { name, propName, cardList,  onCardSelected } = props;
-
-    //console.log(`name - ${name}`);
-    //console.log(`propName - ${propName}`);
-    //console.log(cardList);
-    //console.log(`onCardSelected - ${onCardSelected}`);
-
+    const { propName, cardList,  onCardSelected } = props;
     //console.log(props);
     const items = cardList.map(({imageUrl, id}) => {
         return (
             <li className="list-group-item"
                 key={id}
                 onClick={() => {
-                    onCardSelected(id, name);
+                    onCardSelected(id);
                     //console.log(id);
                 }}
             >

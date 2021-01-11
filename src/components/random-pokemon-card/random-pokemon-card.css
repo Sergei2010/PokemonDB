@@ -1,0 +1,28 @@
+.random-pokemon-card {
+    display: flex;
+    padding: 1rem 3rem;
+    background-color: burlywood;
+}
+
+.random-pokemon-card .pokemon-image {
+    width: 200px;
+    border-radius: 10px;
+    margin-right: 2rem;
+}
+
+.random-pokemon-card .list-group {
+    margin: 1rem 0 0 1rem;
+    text-indent: 1rem;
+}
+
+.random-pokemon-card .list-group-item {
+    padding: .25rem;
+}
+
+.random-pokemon-card .list-group-item .term {
+    margin-right: .5rem;
+}
+
+.random-pokemon-card h4 {
+    text-indent: 2rem;
+}

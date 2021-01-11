@@ -90,10 +90,6 @@ export default class ApiPokemonService {
 
     getCard = async (id) => {
         const res = await this.getResource(`/cards/${id}/`);
-        /*if (!res) {
-            console.log('you have some mistakes in GETCARD...');
-            return;
-        }*/
         const {card} = res;
         return this._transformCard(card);
     }
@@ -167,10 +163,11 @@ export default class ApiPokemonService {
         return {
             id: card.id,
             name: card.name,
-            number: card.number,
-            setCode: card.setCode,
+            imageUrlHiRes: card.imageUrlHiRes,
             types: card.types,
-            subtypes: card.subtype
+            subtypes: card.subtype,
+            number: card.number,
+            setCode: card.setCode
         };
     };
 
