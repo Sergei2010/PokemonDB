@@ -6,18 +6,18 @@ const withDataPropList = (View, getData) => {
     return class extends Component {
 
         state = {
-            data: null,
-            propName: null,
-            propList: null
+            data: null
+            //propName: null,
+            //propList: null
         };
 
         componentDidMount() {
             getData()
                 .then((data) => {
                     this.setState({
-                        data,
-                        propName: data.propName,
-                        propList: data.propList
+                        data
+                        //propName: data.propName,
+                        //propList: data.propList
                     });
                 });
         }

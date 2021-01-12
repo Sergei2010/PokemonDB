@@ -1,7 +1,7 @@
 import React from 'react';
+import icon from './pikachu.svg';
 
 import './error-indicator.css';
-import icon from './pikachu.svg';
 
 const ErrorIndicator = () => {
     return (

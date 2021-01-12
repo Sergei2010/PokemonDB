@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import Spinner from '../spinner';
 import ErrorIndicator from '../error-indicator';
+import ApiPokemonServiceUpdate from "../../services/api-pokemon-service-update";
 
 import './random-pokemon-card.css';
 
 export default class RandomPokemonCard extends Component {
 
-    _apiBase = 'https://api.pokemontcg.io/v1/cards/';
+    apiPokemonServiceUpdate = new ApiPokemonServiceUpdate();
 
     state = {
         card: {},
@@ -15,14 +16,13 @@ export default class RandomPokemonCard extends Component {
     }
 
     componentDidMount() {
-        this.updateCard()
-            .then(() => this.interval = setInterval(this.updateCard, 10000));
+        this.updateCardData();
+        this.interval = setInterval(this.updateCardData, 10000);
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
     }
-
 
     onCardLoaded = (card) => {
         this.setState({
@@ -40,28 +40,12 @@ export default class RandomPokemonCard extends Component {
         console.log(`you have some error - ${err}`);
     };
 
-    updateCard = async () => {
-        try{
-            let res = await fetch(this._apiBase);
-            res = await res.json();
-            let card = await Object.values(res)[0].map(this._transformAllCards)[Math.floor(Math.random() * 100)];
-            this.onCardLoaded(card);
-        } catch (err) {
-            this.onError(err)
-        }
+    updateCardData = () => {
+        this.apiPokemonServiceUpdate
+            .updateCard()
+            .then(this.onCardLoaded)
+            .catch(this.onError);
     }
-
-    _transformAllCards = (card) => {
-        return {
-            id: card.id,
-            name: card.name,
-            imageUrl: card.imageUrl,
-            types: card.types,
-            subtypes: card.subtype,
-            number: card.number,
-            setCode: card.setCode
-        };
-    };
 
     render() {
 
@@ -72,7 +56,7 @@ export default class RandomPokemonCard extends Component {
         const content = hasData ? <CardView card={card} /> : null;
 
         return (
-            <div className="random-pokemon jumbotron rounded">
+            <div className="random-pokemon-card jumbotron rounded">
                 { errorMessage }
                 { spinner }
                 { content }

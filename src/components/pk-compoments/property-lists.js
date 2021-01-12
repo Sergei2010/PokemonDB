@@ -1,11 +1,11 @@
 /*import React from 'react';*/
 import PropertyList from '../property-list';
 import { withDataPropList } from '../hoc-helpers';
-import ApiPokemonService from '../../services/api-pokemon-service';
+import ApiPokemonServiceUpdate from '../../services/api-pokemon-service-update';
 
-const apiPokemonService = new ApiPokemonService();
+const apiPokemonServiceUpdate = new ApiPokemonServiceUpdate();
 
-const { getAllTypes, getAllSubtypes} = apiPokemonService;
+const { getAllTypes, getAllSubtypes} = apiPokemonServiceUpdate;
 
 
 const TypesList = withDataPropList(PropertyList, getAllTypes);

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropertyList from '../property-list/property-list';
 import CardList from '../card-list/card-list';
 import ErrorIndicator from '../error-indicator/error-indicator';
-import ApiPokemonService from '../../services/api-pokemon-service';
+import ApiPokemonServiceUpdate from '../../services/api-pokemon-service-update';
 import ErrorBoundry from "../error-boundry";
 
 import './pokemon-page.css';
@@ -23,7 +23,7 @@ const Row = ({ left, right }) => {
 
 export default class PokemonPage extends Component {
 
-    apiPokemonService = new ApiPokemonService();
+    apiPokemonServiceUpdate = new ApiPokemonServiceUpdate();
 
     state = {
         selectedTypes: null,
@@ -46,7 +46,7 @@ export default class PokemonPage extends Component {
         const propertyList = (
             <PropertyList
                 onPropSelected={this.onPropSelected}
-                getData={this.apiPokemonService.getAllTypes} />
+                getData={this.apiPokemonServiceUpdate.getAllTypes} />
         );
 
         const cardList = (

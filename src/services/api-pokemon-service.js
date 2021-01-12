@@ -94,13 +94,13 @@ export default class ApiPokemonService {
         return this._transformCard(card);
     }
 
-    getAllCardsId = async () => {
-       /* const allCardsId = [];
+    /*getAllCardsId = async () => {
+       /!* const allCardsId = [];
         const res = await this.getAllCards();
         res.forEach((card) => {
             allCardsId.push(card.id);
         });
-        return allCardsId;*/
+        return allCardsId;*!/
         try{
             const allCardsId = [];
             const res = await this.getAllCards();
@@ -111,11 +111,11 @@ export default class ApiPokemonService {
         } catch (e) {
             console.log(`you have some mistakes in GETALLCARDSID - ${e}`);
         }
-    }
+    }*/
 
-    getRandomId = async () => {
-        /*const res = await this.getAllCardsId();
-        return res[Math.floor(Math.random() * 50)];*/
+    /*getRandomId = async () => {
+        /!*const res = await this.getAllCardsId();
+        return res[Math.floor(Math.random() * 50)];*!/
         try{
             const res = await this.getAllCardsId();
             return res[Math.floor(Math.random() * 50)];
@@ -123,7 +123,7 @@ export default class ApiPokemonService {
             console.log(`you have some mistakes in GETRANDOMID - ${e}`);
             //setTimeout(await this.getRandomId(), 2000);
         }
-    }
+    }*/
 
     getAllSets() {
         return this.getResource(`/sets/`);

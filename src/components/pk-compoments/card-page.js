@@ -1,13 +1,13 @@
 
 import Card from '../card';
 import { withDataCard } from '../hoc-helpers';
-import ApiPokemonService from '../../services/api-pokemon-service';
+import ApiPokemonServiceUpdate from '../../services/api-pokemon-service-update';
 
-const apiPokemonService = new ApiPokemonService();
+const apiPokemonServiceUpdate = new ApiPokemonServiceUpdate();
 
 const {
     getCard
-} = apiPokemonService;
+} = apiPokemonServiceUpdate;
 
 const CardPage = withDataCard(Card, getCard);
 

@@ -1,8 +1,6 @@
 import React, { Component, Suspense } from 'react';
 
 import Header from '../header';
-import RandomPokemon from '../random-pokemon';
-//import ErrorButton from '../error-button/error-button';
 import ErrorIndicator from '../error-indicator';
 import ErrorBoundry from '../error-boundry';
 import {
@@ -11,12 +9,13 @@ import {
     CardTypesList,
     CardSubtypesList
 } from '../pk-compoments';
-import Card from "../card";
+//import Card from "../card";
 
 import './app.css';
 import Spinner from "../spinner";
 import {CardPage} from "../pk-compoments/card-page";
 import RandomPokemonCard from "../random-pokemon-card";
+//import RandomPokemon from "../random-pokemon";
 /*import PokemonPage from "../pokemon-page/pokemon-page";*/
 
 export default class App extends Component {
@@ -51,7 +50,7 @@ export default class App extends Component {
         });
     };
 
-    onCardSelected = (id, card) => {
+    onCardSelected = (id) => {
         this.setState({
             id
         });
@@ -64,7 +63,7 @@ export default class App extends Component {
         }
 
         const pokemon = this.state.showRandomPokemon ?
-            <RandomPokemon /> :
+            <RandomPokemonCard /> :
             null;
 
         const Row = ({ left, right }) => {
@@ -81,8 +80,6 @@ export default class App extends Component {
         };
 
         const { name, propName, id, card } = this.state;
-        //console.log(`name - ${name}`);
-        //console.log(`propName - ${propName}`);
 
         let cardTypesShow;
         let cardSubtypesShow;
@@ -107,15 +104,7 @@ export default class App extends Component {
                         <Header />
                     </ErrorBoundry>
 
-                    {/*<ErrorBoundry>
-                        { pokemon }
-                    </ErrorBoundry>*/}
-
-                    {/*<Suspense fallback={<Spinner />}>
-                       { pokemon }
-                    </Suspense>*/}
-
-                    <RandomPokemonCard />
+                    { pokemon }
 
                     <div className="row mb2 button-row">
                         <button
@@ -124,14 +113,6 @@ export default class App extends Component {
                             Toggle Random Pokemon
                         </button>
                     </div>
-
-                    {/*<PokemonPage />*/}
-
-                    {/*<TypesList onPropSelected={this.onPropSelected} />
-                    <SubtypesList onPropSelected={this.onPropSelected} />*/}
-                    {/*<CardList propName={this.state.propName}/>*/}
-
-                    {/*{ cardShow }*/}
 
                     <Suspense fallback={<Spinner />}>
                             <Row
@@ -147,7 +128,7 @@ export default class App extends Component {
 
                     <CardPage id={id} card={card} />
 
-                    <Card id={id} />
+                   {/* <Card id={id} />*/}
 
                 </div>
             </ErrorBoundry>

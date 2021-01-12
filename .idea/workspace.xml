@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon-card/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon-card/random-pokemon-card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/random-pokemon-card/random-pokemon-card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api-pokemon-service-update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card-list/card-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hoc-helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc-helpers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-proplist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-proplist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/card-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/property-lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/property-lists.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/random-pokemon-card/random-pokemon-card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/random-pokemon-card/random-pokemon-card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api-pokemon-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api-pokemon-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -142,7 +142,9 @@
       <workItem from="1610202735393" duration="10263000" />
       <workItem from="1610288500212" duration="9034000" />
       <workItem from="1610304544133" duration="5086000" />
-      <workItem from="1610357505747" duration="9793000" />
+      <workItem from="1610357505747" duration="25322000" />
+      <workItem from="1610472517279" duration="634000" />
+      <workItem from="1610474633973" duration="3211000" />
     </task>
     <servers />
   </component>

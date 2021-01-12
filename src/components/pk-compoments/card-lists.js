@@ -1,14 +1,14 @@
 
 import CardList from '../card-list';
 import { withDataCardList } from '../hoc-helpers';
-import ApiPokemonService from '../../services/api-pokemon-service';
+import ApiPokemonServiceUpdate from '../../services/api-pokemon-service-update';
 
-const apiPokemonService = new ApiPokemonService();
+const apiPokemonServiceUpdate = new ApiPokemonServiceUpdate();
 
 const {
     getTypesCardList,
     getSubtypesCardList
-} = apiPokemonService;
+} = apiPokemonServiceUpdate;
 
 const CardTypesList = withDataCardList(CardList, getTypesCardList);
 
