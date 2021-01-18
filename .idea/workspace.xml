@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/api-pokemon-service-update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/api-service-context/api-service-context.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/api-service-context/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-proplist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-proplist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-lists.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/card-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/card-page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pk-compoments/property-lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pk-compoments/property-lists.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pokemon-page/pokemon-page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/random-pokemon-card/random-pokemon-card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/random-pokemon-card/random-pokemon-card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api-pokemon-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api-pokemon-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card-list/card-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-cardlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-cardlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +143,16 @@
       <workItem from="1610304544133" duration="5086000" />
       <workItem from="1610357505747" duration="25322000" />
       <workItem from="1610472517279" duration="634000" />
-      <workItem from="1610474633973" duration="3211000" />
+      <workItem from="1610474633973" duration="4159000" />
+      <workItem from="1610529492046" duration="75000" />
+      <workItem from="1610552557942" duration="2615000" />
+      <workItem from="1610644362518" duration="509000" />
+      <workItem from="1610812745694" duration="4684000" />
+      <workItem from="1610826629427" duration="5468000" />
+      <workItem from="1610876251893" duration="9843000" />
+      <workItem from="1610896951375" duration="3631000" />
+      <workItem from="1610902888538" duration="658000" />
+      <workItem from="1610971534918" duration="9839000" />
     </task>
     <servers />
   </component>

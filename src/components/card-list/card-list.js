@@ -5,7 +5,7 @@ import './card-list.css';
 
 const CardList = (props) => {
 
-    const { propName, cardList,  onCardSelected } = props;
+    const { name, propName, cardList,  onCardSelected } = props;
     //console.log(props);
     const items = cardList.map(({imageUrl, id}) => {
         return (
@@ -23,7 +23,7 @@ const CardList = (props) => {
 
     return (
         <Fragment>
-            <h2 className="pl-4">{ propName }</h2>
+            <h2 className="pl-4">{ propName } - { name }</h2>
             <ErrorButton />
             <ul className=" card-list
                     list-group

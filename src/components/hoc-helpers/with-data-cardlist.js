@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-//import Spinner from '../spinner';
-//import ErrorIndicator from '../error-indicator';
-
 
 const withDataCardList = (View, getData) => {
     return class extends Component {

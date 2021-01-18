@@ -1,5 +1,4 @@
 import React, { Component, Suspense } from 'react';
-
 import Header from '../header';
 import ErrorIndicator from '../error-indicator';
 import ErrorBoundry from '../error-boundry';
@@ -9,14 +8,14 @@ import {
     CardTypesList,
     CardSubtypesList
 } from '../pk-compoments';
-//import Card from "../card";
+
+import Spinner from "../spinner";
+import { CardPage } from "../pk-compoments/card-page";
+import RandomPokemonCard from "../random-pokemon-card";
+import { ApiServiceProvider } from '../api-service-context';
+import classNames from 'classnames';
 
 import './app.css';
-import Spinner from "../spinner";
-import {CardPage} from "../pk-compoments/card-page";
-import RandomPokemonCard from "../random-pokemon-card";
-//import RandomPokemon from "../random-pokemon";
-/*import PokemonPage from "../pokemon-page/pokemon-page";*/
 
 export default class App extends Component {
 
@@ -43,11 +42,12 @@ export default class App extends Component {
         })
     }
 
-    onPropSelected = (name, propName) => {
+    onPropSelected = (name, propName, ) => {
         this.setState({
             name,
             propName
         });
+        classNames("list-group-item", "list-group-item-clicked");
     };
 
     onCardSelected = (id) => {
@@ -98,40 +98,42 @@ export default class App extends Component {
         }
 
         return (
+
             <ErrorBoundry>
-                <div className="pokemondb-app">
-                    <ErrorBoundry>
-                        <Header />
-                    </ErrorBoundry>
+                <ApiServiceProvider value={ this.apiService }>
+                    <div className="pokemondb-app">
+                        <ErrorBoundry>
+                            <Header />
+                        </ErrorBoundry>
 
-                    { pokemon }
+                        { pokemon }
 
-                    <div className="row mb2 button-row">
-                        <button
-                            className="toggle-pokemon btn btn-warning btn-lg"
-                            onClick={this.toggleRandomPokemon}>
-                            Toggle Random Pokemon
-                        </button>
-                    </div>
+                        <div className="row mb2 button-row">
+                            <button
+                                className="toggle-pokemon btn btn-warning btn-lg"
+                                onClick={this.toggleRandomPokemon}>
+                                Toggle Random Pokemon
+                            </button>
+                        </div>
 
-                    <Suspense fallback={<Spinner />}>
+                        <Suspense fallback={<Spinner />}>
                             <Row
                                 left={ <TypesList onPropSelected={this.onPropSelected} /> }
                                 right={ cardTypesShow } />
-                    </Suspense>
+                        </Suspense>
 
-                    <Suspense fallback={<Spinner />}>
-                        <Row
-                            left={ <SubtypesList onPropSelected={this.onPropSelected} /> }
-                            right={ cardSubtypesShow } />
-                    </Suspense>
+                        <Suspense fallback={<Spinner />}>
+                            <Row
+                                left={ <SubtypesList onPropSelected={this.onPropSelected} /> }
+                                right={ cardSubtypesShow } />
+                        </Suspense>
 
-                    <CardPage id={id} card={card} />
+                        <CardPage id={id} card={card} />
 
-                   {/* <Card id={id} />*/}
-
-                </div>
+                    </div>
+                </ApiServiceProvider>
             </ErrorBoundry>
+
         );
     }
 }

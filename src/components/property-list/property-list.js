@@ -1,17 +1,15 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
+import classNames from 'classnames';
 
 import './property-list.css';
 
 const PropertyList = (props) => {
 
     const { data, onPropSelected } = props;
-
+    //console.log(props);
     const { propName, propList } = data;
 
-    //console.log(props);
-
     const items = propList.map((name, id) => {
-
         return (
             <li className="list-group-item"
                 key={id}
@@ -20,14 +18,15 @@ const PropertyList = (props) => {
                     //console.log(`name - ${name}`);
                     //console.log(`propName - ${propName}`);
                 }}>
-                { name }
+                <a href="/#">{ name }</a>
             </li>
+
         );
     });
 
     return (
         <Fragment>
-            <h2 className="pl-4">{propName}</h2>
+            <h2 className="pl-4">{ propName }</h2>
             <ul className="item-list list-group">
                 { items }
             </ul>
