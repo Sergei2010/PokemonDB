@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/api-service-context/api-service-context.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/api-service-context/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card-list/card-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-cardlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hoc-helpers/with-data-cardlist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +145,9 @@
       <workItem from="1610876251893" duration="9843000" />
       <workItem from="1610896951375" duration="3631000" />
       <workItem from="1610902888538" duration="658000" />
-      <workItem from="1610971534918" duration="9839000" />
+      <workItem from="1610971534918" duration="10381000" />
+      <workItem from="1611173490774" duration="4441000" />
+      <workItem from="1611221176782" duration="2633000" />
     </task>
     <servers />
   </component>

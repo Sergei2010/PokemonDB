@@ -13,7 +13,7 @@ import Spinner from "../spinner";
 import { CardPage } from "../pk-compoments/card-page";
 import RandomPokemonCard from "../random-pokemon-card";
 import { ApiServiceProvider } from '../api-service-context';
-import classNames from 'classnames';
+//import classNames from 'classnames';
 
 import './app.css';
 
@@ -24,6 +24,7 @@ export default class App extends Component {
         hasError: false,
         name: null,
         propName: null,
+        itemClicked: false,
         id: null,
         card: null
     };
@@ -42,12 +43,13 @@ export default class App extends Component {
         })
     }
 
-    onPropSelected = (name, propName, ) => {
+    onPropSelected = (name, propName, itemClicked) => {
         this.setState({
             name,
-            propName
+            propName,
+            itemClicked: true
         });
-        classNames("list-group-item", "list-group-item-clicked");
+        //classNames("list-group-item", "list-group-item-clicked");
     };
 
     onCardSelected = (id) => {
