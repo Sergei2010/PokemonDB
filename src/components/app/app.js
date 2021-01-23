@@ -24,7 +24,6 @@ export default class App extends Component {
         hasError: false,
         name: null,
         propName: null,
-        itemClicked: false,
         id: null,
         card: null
     };
@@ -43,13 +42,12 @@ export default class App extends Component {
         })
     }
 
-    onPropSelected = (name, propName, itemClicked) => {
+    onPropSelected = (name, propName) => {
         this.setState({
             name,
-            propName,
-            itemClicked: true
+            propName
         });
-        //classNames("list-group-item", "list-group-item-clicked");
+        /*classNames("list-group-item", "list-group-item-clicked");*/
     };
 
     onCardSelected = (id) => {
