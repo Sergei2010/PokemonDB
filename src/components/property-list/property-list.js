@@ -1,5 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
-//import classNames from 'classnames';
+import React, { Fragment } from 'react';
 
 import './property-list.css';
 
@@ -10,18 +9,19 @@ const PropertyList = (props) => {
     const { propName, propList } = data;
 
 
-    const [style, setStyle] = useState('');
+    /*let [style, setStyle] = useState('list-group-item');
 
     useEffect(() => {
         // Обновляем заголовок документа с помощью API браузера
         document.title = `Вы установили стиль - ${style}`;
-    });
+        classNames("list-group-item", "list-group-item-clicked")
+    });*/
 
     const items = propList.map((name, id) => {
 
         return (
 
-            <li className='list-group-item'
+            <li className="list-group-item"
                 key={id}
                 onClick={(e) => {
                     onPropSelected(name, propName);
@@ -30,9 +30,10 @@ const PropertyList = (props) => {
                     for (let i = 0; i < foo.length; i++) {
                         foo[i].classList.remove("list-group-item-clicked");
                     }
-                    e.currentTarget.className="list-group-item-clicked";
-
+                    e.currentTarget.classList.remove("list-group-item");
+                    e.currentTarget.classList.add("list-group-item-clicked");
                     console.log(e.currentTarget);
+
                     //console.log(`name - ${name}`);
                     //console.log(`propName - ${propName}`);
                 }}>
@@ -45,13 +46,11 @@ const PropertyList = (props) => {
     return (
         <Fragment>
             <h2 className="pl-4">{ propName }</h2>
-            <p>`Вы установили стиль - {style}`</p>
+            {/*<p>`Вы установили стиль - {style}`</p>
             <button onClick={() => setStyle("list-group-item-clicked")}>
                 Нажми на меня
-            </button>
-            <ul className="item-list list-group">
-                { items }
-            </ul>
+            </button>*/}
+            <ul className="item-list list-group">{ items }</ul>
         </Fragment>
     );
 

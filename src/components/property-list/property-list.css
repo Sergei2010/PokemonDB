@@ -3,13 +3,12 @@
     text-indent: 2rem;
 }
 
-.item-list .list-group-item-clicked {
+.list-group-item-clicked a {
     color: red !important;
-    font-weight: bold;
-    text-indent: 6rem !important;
+    text-indent: 2rem !important;
+    font-size: x-large !important;
 }
 
-/*
 .list-group-item a {
     color: #1c8dc7;
     padding: 10px;
@@ -25,9 +24,8 @@
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-*/
 
-/*.list-group-item a:hover {
+.list-group-item a:hover {
     color: #7cc9f0;
     background-color: #cccccc;
 }
@@ -42,13 +40,12 @@
     color: #f59805;
     background-color: #555555;
     text-decoration: underline;
-}*/
+}
 
 .list-group-item a:first-letter {
     color: #333333;
 }
 
-/*
 .list-group-item a:active:first-letter, a:target:first-letter {
     color: #eeeeee;
-}*/
+}
