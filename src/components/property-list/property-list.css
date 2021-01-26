@@ -1,15 +1,18 @@
 .item-list .list-group-item {
     cursor: pointer;
-    text-indent: 2rem;
+    padding: 2px;
 }
 
-.list-group-item-clicked a {
+.list-group-item-clicked {
     color: red !important;
     text-indent: 2rem !important;
     font-size: x-large !important;
 }
 
-.list-group-item a {
+.list-group-item button {
+    width: 100%;
+    text-align: left;
+    text-indent: 2rem;
     color: #1c8dc7;
     padding: 10px;
     text-decoration: none;
@@ -25,27 +28,27 @@
     transition: all 0.5s ease-in-out;
 }
 
-.list-group-item a:hover {
+.list-group-item button:hover {
     color: #7cc9f0;
     background-color: #cccccc;
 }
 
-.list-group-item a:active {
+.list-group-item button:active {
     color: #7cc9f0;
     background-color: #555555;
     text-decoration: underline;
 }
 
-.list-group-item a:target {
+.list-group-item button:target {
     color: #f59805;
     background-color: #555555;
     text-decoration: underline;
 }
 
-.list-group-item a:first-letter {
+.list-group-item button:first-letter {
     color: #333333;
 }
 
-.list-group-item a:active:first-letter, a:target:first-letter {
+.list-group-item button:active:first-letter, button:target:first-letter {
     color: #eeeeee;
 }

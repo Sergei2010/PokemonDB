@@ -9,11 +9,11 @@ import {
     CardSubtypesList
 } from '../pk-compoments';
 
-import Spinner from "../spinner";
-import { CardPage } from "../pk-compoments/card-page";
-import RandomPokemonCard from "../random-pokemon-card";
+import Spinner from '../spinner';
+import { CardPage } from '../pk-compoments/card-page';
+import RandomPokemonCard from '../random-pokemon-card';
 import { ApiServiceProvider } from '../api-service-context';
-//import classNames from 'classnames';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './app.css';
 
@@ -28,13 +28,13 @@ export default class App extends Component {
         card: null
     };
 
-    toggleRandomPokemon = () => {
+    /*toggleRandomPokemon = () => {
         this.setState((state) => {
             return {
                 showRandomPokemon: !state.showRandomPokemon
             }
         });
-    };
+    };*/
 
     componentDidCatch(error, errorInfo) {
         this.setState({
@@ -97,18 +97,51 @@ export default class App extends Component {
                                     onCardSelected={this.onCardSelected} />
         }
 
+        const types = () => {
+            return (<Suspense fallback={<Spinner />}>
+                        <Row
+                            left={ <TypesList onPropSelected={this.onPropSelected} /> }
+                            right={ cardTypesShow } />
+                    </Suspense>)
+        }
+
+        const subtypes = () => {
+            return (<Suspense fallback={<Spinner />}>
+                    <Row
+                        left={ <SubtypesList onPropSelected={this.onPropSelected} /> }
+                        right={ cardSubtypesShow } />
+                    </Suspense>)
+        }
+
+        const cardpage = () => {
+            return (<Suspense fallback={<Spinner />}>
+                        <CardPage id={id} card={card} />
+                    </Suspense>)
+        }
+
         return (
 
             <ErrorBoundry>
                 <ApiServiceProvider value={ this.apiService }>
-                    <div className="pokemondb-app">
+                   <Router>
+                        <div className="pokemondb-app">
                         <ErrorBoundry>
                             <Header />
                         </ErrorBoundry>
 
-                        { pokemon }
+                        {/*{ pokemon }*/}
 
-                        <div className="row mb2 button-row">
+                        <Route exact path='/' render={() => pokemon}  />
+                        <Route path="/types" render={() => types()} />
+                        <Route path="/subtypes" render={() => subtypes()} />
+                        <Route path="/card" render={() => cardpage()} />
+                        <Route path="/exit" render={() => <h1>Exit</h1>} />
+
+                        {/*<CardPage id={id} card={card} />*/}
+
+                        {/*{ cardpage() }*/}
+
+                        {/*<div className="row mb2 button-row">
                             <button
                                 className="toggle-pokemon btn btn-warning btn-lg"
                                 onClick={this.toggleRandomPokemon}>
@@ -119,18 +152,19 @@ export default class App extends Component {
                         <Suspense fallback={<Spinner />}>
                             <Row
                                 left={ <TypesList onPropSelected={this.onPropSelected} /> }
-                                right={ cardTypesShow } />
+                                right={ CardTypesShow } />
                         </Suspense>
 
                         <Suspense fallback={<Spinner />}>
                             <Row
                                 left={ <SubtypesList onPropSelected={this.onPropSelected} /> }
-                                right={ cardSubtypesShow } />
-                        </Suspense>
+                                right={ CardSubtypesShow } />
+                        </Suspense>*/}
 
-                        <CardPage id={id} card={card} />
+                        {/*<CardPage id={id} card={card} />*/}
 
                     </div>
+                   </Router>
                 </ApiServiceProvider>
             </ErrorBoundry>
 

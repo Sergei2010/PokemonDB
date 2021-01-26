@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from "react-router-dom";
 import ErrorButton from "../error-button";
 
 import './card-list.css';
@@ -16,7 +17,9 @@ const CardList = (props) => {
                     //console.log(id);
                 }}
             >
-                <img src={imageUrl} alt='imageCard'/>
+                <Link to='/card'>
+                    <img src={imageUrl} alt='imageCard'/>
+                </Link>
             </li>
         );
     });
