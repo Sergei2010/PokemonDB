@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Auth/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PrivateRoute.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Callback/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Callback/loading.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Private/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Public/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authorization/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/one-time-password/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/one-time-password/one-time-password.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/one-time-password/one-time-password.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card-list/card-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +71,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/build/static/js/2.de60c451.chunk.js" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/card" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -77,8 +89,27 @@
       <recent name="$PROJECT_DIR$/src/components/card" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components/app" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -161,7 +192,26 @@
       <workItem from="1611490537499" duration="864000" />
       <workItem from="1611492840221" duration="1021000" />
       <workItem from="1611517786218" duration="3908000" />
-      <workItem from="1611568262766" duration="23696000" />
+      <workItem from="1611568262766" duration="24075000" />
+      <workItem from="1611750531381" duration="4737000" />
+      <workItem from="1611847489916" duration="62000" />
+      <workItem from="1611847590083" duration="9672000" />
+      <workItem from="1612006876867" duration="4698000" />
+      <workItem from="1612015160385" duration="143000" />
+      <workItem from="1612088703901" duration="9707000" />
+      <workItem from="1612193225808" duration="7567000" />
+      <workItem from="1612267836503" duration="10270000" />
+      <workItem from="1612304969149" duration="11000" />
+      <workItem from="1612347576528" duration="1420000" />
+      <workItem from="1612443185241" duration="1445000" />
+      <workItem from="1612449720835" duration="262000" />
+      <workItem from="1612451279890" duration="5383000" />
+      <workItem from="1612550999457" duration="3262000" />
+      <workItem from="1612599738991" duration="10615000" />
+      <workItem from="1612691971756" duration="655000" />
+      <workItem from="1612694032180" duration="2852000" />
+      <workItem from="1612701780839" duration="1335000" />
+      <workItem from="1612703248792" duration="2947000" />
     </task>
     <servers />
   </component>

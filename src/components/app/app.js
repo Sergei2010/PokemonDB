@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from 'react';
+import React, { Component, Suspense, Fragment } from 'react';
 import Header from '../header';
 import ErrorIndicator from '../error-indicator';
 import ErrorBoundry from '../error-boundry';
@@ -12,8 +12,21 @@ import {
 import Spinner from '../spinner';
 import { CardPage } from '../pk-compoments/card-page';
 import RandomPokemonCard from '../random-pokemon-card';
-import { ApiServiceProvider } from '../api-service-context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+//import { ApiServiceProvider } from '../api-service-context';
+
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+//import { createBrowserHistory } from 'history';
+
+
+//import Authorization from '../authorization';
+//import OneTimePassword from '../one-time-password';
+import { AuthProvider } from '../../Auth';
+import { PrivateRoute } from '../../PrivateRoute';
+import { Nav, NavLink } from '../../components/index';
+import Public from '../Public';
+import Login from '../Login';
+import Private from '../Private';
+import Callback from '../Callback';
 
 import './app.css';
 
@@ -47,7 +60,6 @@ export default class App extends Component {
             name,
             propName
         });
-        /*classNames("list-group-item", "list-group-item-clicked");*/
     };
 
     onCardSelected = (id) => {
@@ -58,12 +70,18 @@ export default class App extends Component {
 
     render() {
 
+        const to = "/public";
+
         if (this.state.hasError) {
             return <ErrorIndicator />
         }
 
         const pokemon = this.state.showRandomPokemon ?
-            <RandomPokemonCard /> :
+            <Fragment>
+                <Header />
+                <RandomPokemonCard />
+            </Fragment>
+             :
             null;
 
         const Row = ({ left, right }) => {
@@ -79,7 +97,11 @@ export default class App extends Component {
             )
         };
 
+        //const customHistory = createBrowserHistory();
+
         const { name, propName, id, card } = this.state;
+        //console.log(`name from state - ${name}`);
+        //console.log(`propName from state - ${propName}`);
 
         let cardTypesShow;
         let cardSubtypesShow;
@@ -99,6 +121,7 @@ export default class App extends Component {
 
         const types = () => {
             return (<Suspense fallback={<Spinner />}>
+                        <Header />
                         <Row
                             left={ <TypesList onPropSelected={this.onPropSelected} /> }
                             right={ cardTypesShow } />
@@ -107,6 +130,7 @@ export default class App extends Component {
 
         const subtypes = () => {
             return (<Suspense fallback={<Spinner />}>
+                    <Header />
                     <Row
                         left={ <SubtypesList onPropSelected={this.onPropSelected} /> }
                         right={ cardSubtypesShow } />
@@ -120,54 +144,37 @@ export default class App extends Component {
         }
 
         return (
-
             <ErrorBoundry>
-                <ApiServiceProvider value={ this.apiService }>
-                   <Router>
+                <Router exact path="/">
+                    <AuthProvider>
+                        <Nav>
+                            <NavLink to="/public" component={ NavLink }>
+                                Public
+                            </NavLink>
+                            <NavLink to="/private">
+                                Private
+                            </NavLink>
+                        </Nav>
+
                         <div className="pokemondb-app">
-                        <ErrorBoundry>
-                            <Header />
-                        </ErrorBoundry>
-
-                        {/*{ pokemon }*/}
-
-                        <Route exact path='/' render={() => pokemon}  />
-                        <Route path="/types" render={() => types()} />
-                        <Route path="/subtypes" render={() => subtypes()} />
-                        <Route path="/card" render={() => cardpage()} />
-                        <Route path="/exit" render={() => <h1>Exit</h1>} />
-
-                        {/*<CardPage id={id} card={card} />*/}
-
-                        {/*{ cardpage() }*/}
-
-                        {/*<div className="row mb2 button-row">
-                            <button
-                                className="toggle-pokemon btn btn-warning btn-lg"
-                                onClick={this.toggleRandomPokemon}>
-                                Toggle Random Pokemon
-                            </button>
+                            <Switch>
+                                {/*<Route exact path='/' render={() => Authorization()}  />
+                                <Route exact path='/otp' component={OneTimePassword}  />
+                                <Route exact path='/rp' render={() => pokemon}  />
+                                <Route path="/types" render={() => types()} />
+                                <Route path="/subtypes" render={() => subtypes()} />
+                                <Route path="/card" render={() => cardpage()} />
+                                <Route path="/exit" render={() => <h1>Exit</h1>} />*/}
+                                <Route path="/public" component={ Public } />
+                                <Route path="/login" component={ Login } />
+                                <Route path="/callback" component={ Callback } />
+                                <PrivateRoute path="/private" component={ Private } />
+                                <Redirect to="/public" />
+                            </Switch>
                         </div>
-
-                        <Suspense fallback={<Spinner />}>
-                            <Row
-                                left={ <TypesList onPropSelected={this.onPropSelected} /> }
-                                right={ CardTypesShow } />
-                        </Suspense>
-
-                        <Suspense fallback={<Spinner />}>
-                            <Row
-                                left={ <SubtypesList onPropSelected={this.onPropSelected} /> }
-                                right={ CardSubtypesShow } />
-                        </Suspense>*/}
-
-                        {/*<CardPage id={id} card={card} />*/}
-
-                    </div>
-                   </Router>
-                </ApiServiceProvider>
+                    </AuthProvider>
+                </Router>
             </ErrorBoundry>
-
         );
     }
 }

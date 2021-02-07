@@ -1,0 +1,25 @@
+.authorization-form {
+    padding: 0 20em;
+}
+
+.authorization {
+    margin-top: .5rem;
+    padding-left: 10px;
+}
+
+.authorization a:hover {
+    text-decoration: none;
+}
+
+.authorization h1 a {
+    color: black;
+    text-decoration: none;
+}
+
+.authorization h1 a:hover, ul li a:hover {
+    color: #00bc8c;
+}
+
+.authorization-form button {
+    margin-left: 10px;
+}
