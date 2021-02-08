@@ -8,8 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card-list/card-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-list/card-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +199,7 @@
       <workItem from="1612729570109" duration="462000" />
       <workItem from="1612787878427" duration="2037000" />
       <workItem from="1612794533684" duration="7774000" />
-      <workItem from="1612815528121" duration="1190000" />
+      <workItem from="1612815528121" duration="1878000" />
     </task>
     <servers />
   </component>

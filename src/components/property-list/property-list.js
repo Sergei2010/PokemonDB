@@ -8,8 +8,8 @@ const PropertyList = (props) => {
     //console.log(onPropSelected);
     const { propName, propList } = data;
     //console.log(`onPropSelected - ${onPropSelected}`);
-    console.log(`propName from data - ${propName}`);
-    console.log(`propList from data - ${propList}`);
+    //console.log(`propName from data - ${propName}`);
+    //console.log(`propList from data - ${propList}`);
 
     /*let [style, setStyle] = useState('list-group-item');
 */

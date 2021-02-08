@@ -18,18 +18,18 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 //import { createBrowserHistory } from 'history';
 
 
-import Authorization from '../authorization';
+//import Authorization from '../authorization';
 //import OneTimePassword from '../one-time-password';
 import { AuthProvider } from '../../Auth';
 import { PrivateRoute } from '../../PrivateRoute';
 import { Nav, NavLink } from '../../components/index';
 import Public from '../Public';
 import Login from '../Login';
-import Private from '../Private';
+//import Private from '../Private';
 import Callback from '../Callback';
 
 import './app.css';
-import {Authentication} from "auth0-js/src";
+//import {Authentication} from "auth0-js/src";
 
 export default class App extends Component {
 
@@ -84,7 +84,6 @@ export default class App extends Component {
                         <Route path="/private/types" render={() => types()} />
                         <Route path="/private/subtypes" render={() => subtypes()} />
                         <Route path="/private/card" render={() => cardpage()} />
-                        <Route path="/private/exit" render={() => <h1>Exit</h1>} />
                     </Switch>
                 </Fragment>)
                 :
