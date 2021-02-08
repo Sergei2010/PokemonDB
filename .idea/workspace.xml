@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a0068d-4fa5-44f9-8f1e-f257a6bb6d1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Auth/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrivateRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Callback/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Callback/loading.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Private/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Public/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/authorization/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/one-time-password/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/one-time-password/one-time-password.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/one-time-password/one-time-password.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Public/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Public/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/property-list/property-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/property-list/property-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authorization/authorization.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/authorization.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authorization/authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/authorization.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +198,10 @@
       <workItem from="1612691971756" duration="655000" />
       <workItem from="1612694032180" duration="2852000" />
       <workItem from="1612701780839" duration="1335000" />
-      <workItem from="1612703248792" duration="2947000" />
+      <workItem from="1612703248792" duration="5051000" />
+      <workItem from="1612729570109" duration="462000" />
+      <workItem from="1612787878427" duration="2037000" />
+      <workItem from="1612794533684" duration="4309000" />
     </task>
     <servers />
   </component>

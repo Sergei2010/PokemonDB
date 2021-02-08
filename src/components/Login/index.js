@@ -2,6 +2,7 @@ import React from 'react';
 import { FlexWrapper, Panel, Button } from '../index';
 import { Redirect } from 'react-router-dom';
 import { withAuth } from '../../Auth';
+import Authorization from "../authorization";
 
 export default withAuth(({ isAuthorized, authorize }) =>
 
@@ -10,9 +11,12 @@ export default withAuth(({ isAuthorized, authorize }) =>
     ) : (
         <FlexWrapper>
             <Panel>
-                <h1>Вы не авторизованы</h1>
+                {/*<h1>Вы не авторизованы</h1>*/}
 
-                <Button onClick={authorize}>Авторизоваться</Button>
+                <Authorization />
+
+                <Button onClick={authorize} type="submit" className="btn btn-primary">Авторизоваться</Button>
+
             </Panel>
         </FlexWrapper>
     )

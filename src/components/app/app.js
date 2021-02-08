@@ -18,7 +18,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 //import { createBrowserHistory } from 'history';
 
 
-//import Authorization from '../authorization';
+import Authorization from '../authorization';
 //import OneTimePassword from '../one-time-password';
 import { AuthProvider } from '../../Auth';
 import { PrivateRoute } from '../../PrivateRoute';
@@ -29,6 +29,7 @@ import Private from '../Private';
 import Callback from '../Callback';
 
 import './app.css';
+import {Authentication} from "auth0-js/src";
 
 export default class App extends Component {
 
@@ -69,8 +70,6 @@ export default class App extends Component {
     }
 
     render() {
-
-        const to = "/public";
 
         if (this.state.hasError) {
             return <ErrorIndicator />
@@ -147,6 +146,32 @@ export default class App extends Component {
             <ErrorBoundry>
                 <Router exact path="/">
                     <AuthProvider>
+                        {/*<Nav>
+                            <NavLink to="/public" component={ NavLink }>
+                                Public
+                            </NavLink>
+                            <NavLink to="/private">
+                                Private
+                            </NavLink>
+                        </Nav>*/}
+
+                        {/*<div className="pokemondb-app">
+                            <Switch>
+                                <Route exact path='/' render={() => Authorization()}  />
+                                <Route exact path='/otp' component={OneTimePassword}  />
+                                <Route exact path='/rp' render={() => pokemon}  />
+                                <Route path="/types" render={() => types()} />
+                                <Route path="/subtypes" render={() => subtypes()} />
+                                <Route path="/card" render={() => cardpage()} />
+                                <Route path="/exit" render={() => <h1>Exit</h1>} />
+                                <Route path="/public" component={ Public } />
+                                <Route path="/login" component={ Login } />
+                                <Route path="/callback" component={ Callback } />
+                                <PrivateRoute path="/private" component={ Private } />
+                                <Redirect to="/public" />
+                            </Switch>
+                        </div>*/}
+
                         <Nav>
                             <NavLink to="/public" component={ NavLink }>
                                 Public
@@ -168,10 +193,13 @@ export default class App extends Component {
                                 <Route path="/public" component={ Public } />
                                 <Route path="/login" component={ Login } />
                                 <Route path="/callback" component={ Callback } />
-                                <PrivateRoute path="/private" component={ Private } />
+                                <PrivateRoute path="/private" component={ Private }>
+                                    {/*<Route path="rp" render={() => pokemon} />*/}
+                                </PrivateRoute>
                                 <Redirect to="/public" />
                             </Switch>
                         </div>
+
                     </AuthProvider>
                 </Router>
             </ErrorBoundry>
