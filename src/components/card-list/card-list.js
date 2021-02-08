@@ -17,7 +17,7 @@ const CardList = (props) => {
                     //console.log(id);
                 }}
             >
-                <Link to='/card'>
+                <Link to='/private/card'>
                     <img src={imageUrl} alt='imageCard'/>
                 </Link>
             </li>

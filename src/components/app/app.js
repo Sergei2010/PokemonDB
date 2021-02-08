@@ -72,16 +72,25 @@ export default class App extends Component {
     render() {
 
         if (this.state.hasError) {
-            return <ErrorIndicator />
+            return <ErrorIndicator/>
         }
 
-        const pokemon = this.state.showRandomPokemon ?
-            <Fragment>
-                <Header />
-                <RandomPokemonCard />
-            </Fragment>
-             :
-            null;
+        const Pokemon = () =>
+            this.state.showRandomPokemon ?
+                (<Fragment>
+                    <Header/>
+                    <RandomPokemonCard/>
+                    <Switch>
+                        <Route path="/private/types" render={() => types()} />
+                        <Route path="/private/subtypes" render={() => subtypes()} />
+                        <Route path="/private/card" render={() => cardpage()} />
+                        <Route path="/private/exit" render={() => <h1>Exit</h1>} />
+                    </Switch>
+                </Fragment>)
+                :
+                (null)
+
+
 
         const Row = ({ left, right }) => {
             return(
@@ -193,9 +202,7 @@ export default class App extends Component {
                                 <Route path="/public" component={ Public } />
                                 <Route path="/login" component={ Login } />
                                 <Route path="/callback" component={ Callback } />
-                                <PrivateRoute path="/private" component={ Private }>
-                                    {/*<Route path="rp" render={() => pokemon} />*/}
-                                </PrivateRoute>
+                                <PrivateRoute path="/private" component={ Pokemon } />
                                 <Redirect to="/public" />
                             </Switch>
                         </div>
